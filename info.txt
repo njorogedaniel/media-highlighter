@@ -1,0 +1,17 @@
+185
+After the introduction of fetch api in javascript, reading file contents could not be simpler.
+
+reading a text file
+
+fetch('file.txt')
+  .then(response => response.text())
+  .then(text => console.log(text))
+  // outputs the content of the text file
+reading a json file
+
+fetch('file.json')
+  .then(response => response.json())
+  .then(jsonResponse => console.log(jsonResponse))     
+   // outputs a javascript object from the parsed json
+Update 30/07/2018 (disclaimer):
+This technique works fine in Firefox, but it seems like Chrome's fetch implementation
